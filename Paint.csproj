@@ -1,0 +1,411 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6EF7414D-DC42-4A76-9E54-9C3BF1A4D3DE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Paint</RootNamespace>
+    <AssemblyName>Paint</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\DevExpress 15.2\Components\Bin\Framework\DevExpress.BonusSkins.v15.2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\DevExpress 15.2\Components\Bin\Framework\DevExpress.Utils.v15.2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v15.2.UI, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\DevExpress 15.2\Components\Bin\Framework\DevExpress.Utils.v15.2.UI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\DevExpress 15.2\Components\Bin\Framework\DevExpress.XtraBars.v15.2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\DevExpress 15.2\Components\Bin\Framework\DevExpress.XtraEditors.v15.2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\DevExpress 15.2\Components\Bin\Framework\DevExpress.XtraLayout.v15.2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Capture.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Paste-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paste-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cut-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\copy-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\past-from.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RectangularSelection-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\copy.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RectangularSelection-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\free-form-selection.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\select-all.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\invert-selection.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\crop-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\resize.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rotate-right.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rotate-right1.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rotate-right2.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rotate-left.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rotate.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rotate-flip-vertical.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rotate-Flip_horizontally.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pencil-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\text-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Color-picker-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eraser-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zoom-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\color-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\brushes.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calligraphy brush 1.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calligraphy brush 2.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\airbrush.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oil-brush.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\carayon.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\natural-pencil.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\watercolor-brush.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\line.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\line1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oval.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rectangle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RoundedRectanglagur-calloutpng.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cloud-callout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diamond.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\down-arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\five-point-star.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\heart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\right-triangle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\outline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\color-161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nooutline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\solid-color.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit-color.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zoom-in-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zoom-out-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\100%25.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Full-Screen.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thumbnail.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\open-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save-as.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\About-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\carayon1.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oil.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\line2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ellipse-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Capture1.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rectangle1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\heart1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\triangle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\curve.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diamond1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\down-arrow1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\five-point-star1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lightning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nooutline1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\outline1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\market-16.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oil1.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\natural-pencil-16.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\watercolor.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\natural-pencil-161.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\color-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\100%251.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oval1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\open.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\about.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hexagon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Heartnew.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
